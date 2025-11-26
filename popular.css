@@ -73,6 +73,13 @@ nav ul li:hover {
   color: white;
   font-family: "Space Grotesk", "sans-serif";
 }
+nav .nav-links {
+  z-index: 9999;
+}
+
+.hamburger {
+  z-index: 10000;
+}
 @media (max-width: 768px) {
   nav .nav-links {
     position: absolute;
