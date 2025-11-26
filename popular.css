@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* body{
+    background-image: url("images/stefan-steinbauer-Is4oR1SLtr0-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    filter: grayscale(100%);
+} */
+header{
+    background-image: url("images/stefan-steinbauer-Is4oR1SLtr0-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    filter: grayscale(100%);
+}
+nav {
+  font-family: "Space Grotesk", "sans-serif";
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  position: sticky;
+  top: 0px;
+  z-index: 99999;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 18px;
+  gap: 40px;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  color: white;
+}
+
+nav ul li:hover {
+  opacity: 0.7;
+
+  transition: all 0.3s;
+}
+
+/* Responsivness */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin: 10px;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  display: block;
+}
+.logo {
+  font-size: 27px;
+  font-weight: 700;
+  color: white;
+  font-family: "Space Grotesk", "sans-serif";
+}
+@media (max-width: 768px) {
+  nav .nav-links {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: white;
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0;
+    transition: height 0.4s ease;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav-links.active {
+    height: auto;
+    width: 100vw;
+    padding-bottom: 15px;
+  }
+
+  nav .nav-links li {
+    padding: 15px;
+    color: black;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
