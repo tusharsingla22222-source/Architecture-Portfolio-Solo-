@@ -345,16 +345,22 @@ nav .nav-links {
 
 /* For mobile view */
 @media (max-width: 768px) {
-  nav .nav-links {
+   nav .nav-links {
     position: absolute;
     top: 90px;
     right: 0;
     background: white;
-    width: 60%;
+    width: 100vw;
     height: 0;
     overflow: hidden;
     flex-direction: column;
-    padding: 0;
+
+    /* ⬇️ Center nav links */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
     transition: height 0.4s ease;
   }
 
@@ -371,6 +377,7 @@ nav .nav-links {
   nav .nav-links li {
     padding: 15px;
     color: black;
+    text-align: center;
   }
 
   .hamburger {
@@ -483,6 +490,7 @@ nav.scrolled .hamburger span {
     text-align: center;
     margin: 0 !important;
     padding: 0;
+    padding-top: 130px ;
   }
 
   .content h1 {
