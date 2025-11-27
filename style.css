@@ -12,7 +12,7 @@ body {
 .back {
   height: 100vh;
   width: 100vw;
-  background-image: url("images/pexels-jplenio-1632788.jpg");
+  background-image: url("images/home-page.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(100%);
@@ -159,7 +159,9 @@ nav ul li:hover {
   display: none;
 }
 .ininite-scroll:hover .wrapper {
-  animation-play-state: paused;
+  animation-play-state:paused;
+  /* animation: scroll 100s linear infinite;
+  transition: all 3s; */
 }
 
 .card {
@@ -396,3 +398,67 @@ nav.scrolled .hamburger span {
     scale: 1.7;
   }
 }
+#scrollpara{
+  color: white;
+  position: absolute;
+  text-transform: uppercase;
+  font-family:'Inter' , sans-serif;
+  font-size: 12px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dancing 0.7s infinite linear alternate;
+}
+@keyframes dancing {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}
+/* FIX HERO CONTENT NOT SHOWING ON MOBILE */
+@media (max-width: 768px) {
+
+  .back {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .content {
+    position: absolute !important;
+    top: 55%;              /* Center inside hero */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  .content h1 {
+    font-size: 28px !important;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .content button {
+    position: static !important;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  /* Remove previous wrong margin */
+  #heading {
+    margin-top: 40px !important;
+    display: block !important;
+  }
+}
+

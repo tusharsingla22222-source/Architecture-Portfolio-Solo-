@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popular Architects</title>
-    <link rel="stylesheet" href="popular.css">
+    <link rel="stylesheet" href="popular.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,24 +17,88 @@
       href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Pompiere&family=Shojumaru&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <div class="logo">ARCH.FOLIO</div>
-          <ul class="nav-links  ">
-            <a href="index.html"><li>HOME</li></a>
-            <a href=""><li>ABOUT</li></a>
-            <a href=""><li>PROJECTS</li></a>
-            <a href=""><li>ABOUT</li></a>
-          </ul>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
+      <nav>
+        <div class="logo">ARCH.FOLIO</div>
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="popular.html">ABOUT</a></li>
+          <li><a href="">PROJECTS</a></li>
+          <li><a href="">ABOUT</a></li>
+        </ul>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <p id="scrollpara">SCROLL</p>
+      <div class="content">
+        <h1 id="heading">Popular Architects Who Shaped Modern Design</h1>
+        <p id="para">
+          A curated collection of the greatest minds in architecture —
+          visionaries who transformed skylines, redefined structure, and
+          inspired generations.
+        </p>
+        <a
+          href="https://science.howstuffworks.com/engineering/architecture/10-most-famous-architects.htm"
+          ><button class="btn">visit site</button></a
+        >
+      </div>
     </header>
-    
-</body>
+    <main>
+      <div class="boxes">
+        <div class="box">
+          <div class="image first"></div>
+          <div class="about">
+            <h2>norman foster</h2>
+            <p>
+              Norman Robert Foster is an English Architect. Closely associated
+              with the development of high-tech architecture, Lord Foster is
+              recognised as a key figure in British modernist architecture. His
+              firm Foster and Partners, first founded in 1967 as Foster
+              Associates is the largest in the United Kingdom, and operates
+              internationally. He also serves as president of the Norman Foster
+              Foundation, established to 'promote interdisciplinary thinking and
+              research to help new generations of architects, designers and
+              urbanists to anticipate the future'.
+            </p>
+            <p>
+              <b>POPULAR WORKS: </b>Apple Park , 30 St Mary Axe (The Gherkin)
+            </p>
+            <p><b>STYLE: </b>High-Tech Modern</p>
+            <a href="norman.html"><button>MORE PROJECTS</button></a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image second"></div>
+          <div class="about">
+            <h2>zaha hadid</h2>
+            <p>
+              Known as the “Queen of Curves,” her work broke traditional
+              geometry and defined the future of architecture.She was also
+              recognized by the 2013 Forbes List as one of the "World's Most
+              Powerful Women"
+            </p>
+            <p><b>POPULAR WORKS: </b>Heydar Aliyev Center</p>
+            <p><b>STYLE: </b>Futuristic , fluid , parametric</p>
+            <a href="Norman-Foster/norman.html"
+              ><button>MORE PROJECTS</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>

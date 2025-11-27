@@ -1,0 +1,252 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --primary-font:'Inter' , sans-serif;
+    --secondary-font:"Space Grotesk" , sans-serif;
+}
+.frontimage{
+    background-image: url("images/apple-park.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    filter: grayscale(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frontimage h1{
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    color: white;
+    font-size: 100px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.5s ease forwards;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading{
+    font-size: 40px;
+    font-family: var(--secondary-font);
+    padding: 20px;
+    padding-left: 70px;
+    padding-block: 50px;
+    /* transform: translateY(30px); */
+}
+.boxes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box{
+    height: 400px;
+    width: 90vw;
+    margin-block: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 2s;
+}
+.box:hover{
+    transform: scale(1.06);
+}
+
+.image{
+    height: 350px;
+    width: 35%;
+    margin: 25px;
+    /* filter: grayscale(100%); */
+    border: none;
+}
+.first{
+    background-image: url("images/gherkin.webp");
+    background-size: cover;
+}
+.second{
+    background-image: url("images/apple-park-two.jpeg");
+    background-size: cover;
+}
+.three{
+    background-image: url("images/hearst-tower.jpg");
+    background-size: cover;
+}
+.four{
+    background-image: url("images/mclaren.webp");
+    background-size: cover;
+}
+.five{
+    background-image: url("images/hongkong-airport.webp");
+    background-size: cover;
+}
+.six{
+    background-image: url("images/zayed-national-musuem.jpg");
+    background-size: cover;
+    background-position: right;
+}
+.seven{
+    background-image: url("https://newyorkyimby.com/wp-content/uploads/2021/12/92D45D82-6711-4FB5-9904-6DF4D5338EC4-e1638746712990.jpg");
+    background-size: cover;
+    background-position: top;
+}
+.eight{
+    background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/75/a9/c6/panoramic-view-of-the.jpg?w=1200&h=-1&s=1");
+    background-size: cover;
+    background-position: right;
+}
+.nine{
+    background-image: url("https://ik.imgkit.net/3vlqs5axxjf/MIT/uploadedImages/Articles/News/Event_Venues/karl-moran-URDWhRXLu7o-unsplash(1).jpg");
+    background-size: cover;
+    background-position: right;
+}
+.ten{
+    background-image: url("https://archello.s3.eu-central-1.amazonaws.com/images/2018/01/28/1FP627903.1517154167.2123.jpg");
+    background-size: cover;
+}
+.eleven{
+    background-image: url("https://arquitecturaviva.com/assets/uploads/obras/40007/av_imagen.webp");
+    background-size: cover;
+}
+/* .image:hover{
+    filter: grayscale(0%);
+    transition: all 0.5s;
+} */
+.content{
+    height: 350px;
+    width: 800px;
+    margin-top: 25px;
+    border: 1px solid black ;
+    border: none;
+    border-block: 1px solid black;
+}
+.content h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--secondary-font);
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.content p{
+    color: black;
+    font-family: var(--secondary-font);
+    /* margin-left: 10px; */
+}
+.content button{
+    padding: 10px;
+    margin-block: 20px;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    border: 2px solid black;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.content button:hover{
+    background: black;
+    color: white;
+
+}
+
+@media screen and (min-width : 1700px) {
+    .frontimage{
+        background-position: center;
+    }
+}
+/* -------------------------------------------- */
+/*     FULL MOBILE RESPONSIVENESS FOR NORMAN    */
+/* -------------------------------------------- */
+
+@media (max-width: 900px) {
+  
+  /* HERO IMAGE TEXT */
+  .frontimage h1 {
+    font-size: 55px;
+    padding: 0 20px;
+  }
+
+  /* PAGE SECTION TITLE */
+  .heading {
+    font-size: 30px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  /* BOX LAYOUT FIX */
+  .box {
+    flex-direction: column;
+    height: auto;
+    width: 95vw;
+    margin-block: 30px;
+    border: 1px solid black;
+  }
+
+  /* IMAGE RESPONSIVE */
+  .image {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    background-position: center;
+  }
+
+  /* CONTENT FIX */
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid black;
+    text-align: left;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+/* SMALL PHONE FIX */
+@media (max-width: 480px) {
+
+  .frontimage h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+}
+
