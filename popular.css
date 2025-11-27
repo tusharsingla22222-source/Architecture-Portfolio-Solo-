@@ -127,8 +127,13 @@ nav .nav-links {
 }
 
 @keyframes dancing {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(10px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
 }
 
 /* MAIN SECTION */
@@ -171,7 +176,8 @@ nav .nav-links {
 .about {
   flex: 1;
   padding: 20px;
-  border-left: 1px solid black;
+  border-block: 1px solid black;
+  margin-block: 20px;
 }
 
 .about h2 {
@@ -228,24 +234,28 @@ nav .nav-links {
     transition: height 0.4s ease;
   }
 
- nav ul li {
-  width: 100%;
-  text-align: center;
-}
+  .about a button {
+    width: 100%;
+  }
 
-nav ul li a {
-  display: block;
-  padding: 15px 0;
-  width: 100%;
-  color: black;
-}
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    color: black;
+  }
 
 
   nav ul.active {
-  height: auto;
-  overflow: visible;
-  padding-bottom: 15px;
-}
+    height: auto;
+    overflow: visible;
+    padding-bottom: 15px;
+  }
 
 
   /* HERO */
@@ -261,6 +271,7 @@ nav ul li a {
   .box {
     flex-direction: column;
     width: 95%;
+    border: 1px solid gray;
   }
 
   .image {
@@ -269,8 +280,8 @@ nav ul li a {
   }
 
   .about {
-    border-left: none;
-    border-top: 1px solid black;
+    border-block: none;
+    /* border-top: 1px solid black; */
   }
 
 }
@@ -289,5 +300,3 @@ nav ul li a {
     font-size: 14px;
   }
 }
-
-
