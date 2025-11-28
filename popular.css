@@ -94,7 +94,8 @@ nav .nav-links {
   color: white;
   max-width: 600px;
   font-size: 18px;
-  font-family: "Inter", sans-serif;
+  /* text-transform: uppercase; */
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .btn {
@@ -172,7 +173,14 @@ nav .nav-links {
   background-image: url("images/zaha-hadid.jpg");
   background-position: center;
 }
-
+.three{
+  background-image: url("images/frank-gehry.jpg");
+  background-position: center;
+}
+.four{
+  background-image: url("https://cdn.sanity.io/images/476nwnl9/production/3780e854f815bc4ac9385496ddb3cc0e8b9bf02b-2414x3000.jpg?auto=format&fit=crop&h=512&rect=735%2C228%2C1257%2C1257&w=512");
+  background-size: cover;
+}
 .about {
   flex: 1;
   padding: 20px;

@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text:'Inter' , sans-serif;
+    --secondary-text: 'Space Grotesk' , sans-serif;
+}
+
+/* ------------------ HERO SECTION ------------------ */
+
+.back{
+    background-image: url("https://143587181.fs1.hubspotusercontent-eu1.net/hubfs/143587181/Imported_Blog_Media/5f860961-5e85-459b-b261-410eb3e4ea63-1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    filter: grayscale(80%);
+    position: relative;
+}
+
+.back h1{
+    color: white;
+    font-family: var(--secondary-text);
+    text-transform: uppercase;
+    font-size: 80px;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 360px;
+    right: 120px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ BOXES LAYOUT ------------------ */
+
+.boxes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 400px;
+    width: 90vw;
+    margin-block: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 2s;
+}
+
+.box:hover{
+    transform: scale(1.06);
+}
+
+.image{
+    height: 350px;
+    width: 35%;
+    margin: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    height: 350px;
+    width: 800px;
+    margin-top: 25px;
+    border: none;
+    border-block: 1px solid black;
+    padding-right: 15px;
+}
+
+.content h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--secondary-text);
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.content p{
+    color: black;
+    font-family: var(--secondary-text);
+}
+
+.content button{
+    padding: 10px;
+    margin-block: 20px;
+    text-transform: uppercase;
+    font-family: var(--secondary-text);
+    border: 1.5px solid black;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.content button:hover{
+    background: black;
+    color: white;
+}
+
+/* ------------------ PROJECT IMAGES ------------------ */
+
+/* .first{ background-image: url("https://www.webuildvalue.com/wp-content/uploads/2020/12/Guangzhou-Opera-House-night-landscape.jpg"); }
+.second{ background-image: url("https://www.architectmagazine.com/wp-content/uploads/sites/5/2013/tmpe0c5-2etmp-tcm20-2011304.jpg"); }
+.third{ background-image: url("https://media1.thrillophilia.com/filestore/mfepbgey6ksia6julxx1f5cx5o9w_shutterstock_311850899.jpg"); }
+.four{ background-image: url("https://visitabudhabi.ae/-/media/project/vad/galleryimages/what-to-see/sheikh-zayed-bridge/sheikh-zayed-bridge.jpg"); }
+.five{ background-image: url("https://i.redd.it/v6ipcadturq81.jpg"); }
+.six{ background-image: url("https://media.cntraveler.com/photos/5db8430711c1e500092e7b1d/master/pass/Beijing-Daxing-New-International-Airport_GettyImages-1089953436.jpg"); }
+.seven{ background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Leeza_SOHO.jpg"); }
+.eight{ background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a0/Pabell%C3%B3n-Puente_Zaragoza.jpg"); }
+.nine{ background-image: url("https://images.squarespace-cdn.com/content/v1/5e57b89fbb687c386d2d6be8/1582907625141-38Y4XP1PQUC95KQROZ5L/Changsha_07a.jpg"); }
+.ten{ background-image: url("https://www.visitdubai.com/-/media/gathercontent/poi/d/dubai-opera/fallback-image/dubai-opera.jpg"); } */
+
+/* ------------------------------------------------------ */
+/*               FULL MOBILE RESPONSIVENESS               */
+/*              (EXACTLY LIKE norman.css)                 */
+/* ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+  /* HERO TITLE */
+  .back h1 {
+    font-size: 55px;
+    bottom: 200px;
+    right: 10px;
+    text-align: right;
+  }
+
+  /* BOXES */
+  .box {
+    flex-direction: column;
+    height: auto;
+    width: 95vw;
+    margin-block: 30px;
+  }
+
+  .image {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid black;
+    text-align: left;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+    .back{
+        background-position: center;
+    }
+  .back h1 {
+    font-size: 50px;
+    bottom: 448px;
+    right: 90px;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+}
+
+.first{
+  background-image: url("https://www.webuildvalue.com/wp-content/uploads/2020/12/Guangzhou-Opera-House-night-landscape.jpg");
+  background-size: cover;
+}
+.second{
+    background-image: url("https://www.architectmagazine.com/wp-content/uploads/sites/5/2013/tmpe0c5-2etmp-tcm20-2011304.jpg");
+    background-size: cover;
+}
+.third{
+    background-image: url("https://media1.thrillophilia.com/filestore/mfepbgey6ksia6julxx1f5cx5o9w_shutterstock_311850899.jpg");
+    background-size: cover
+    ;
+}
+.four{
+    background-image: url("https://visitabudhabi.ae/-/media/project/vad/galleryimages/what-to-see/sheikh-zayed-bridge/sheikh-zayed-bridge.jpg?rev=26d117b4ca754d65aad90cd7bdfde4e2");
+    background-size: cover;
+}
+.five{
+    background-image: url("https://i.redd.it/v6ipcadturq81.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.six{
+    background-image: url("https://media.cntraveler.com/photos/5db8430711c1e500092e7b1d/master/pass/Beijing-Daxing-New-International-Airport_GettyImages-1089953436.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.seven{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Leeza_SOHO.jpg");
+    background-size: cover;
+}
+.eight{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a0/Pabell%C3%B3n-Puente_Zaragoza.jpg");
+    background-size: cover;
+}
+.nine{
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5e57b89fbb687c386d2d6be8/1582907625141-38Y4XP1PQUC95KQROZ5L/Changsha_07a.jpg");
+    background-size: cover;
+}
+.ten{
+    background-image: url("https://www.visitdubai.com/-/media/gathercontent/poi/d/dubai-opera/fallback-image/dubai-opera.jpg");
+    background-size: cover;
+    background-position: right;
+}
