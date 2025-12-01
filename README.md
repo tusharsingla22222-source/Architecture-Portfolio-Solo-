@@ -169,7 +169,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **LinkedIn**: https://www.linkedin.com/in/tushar-singla-aab67b387/
 
-**Website**: https://architect-portfolio-solo.netlify.app/
+**Website**: https://tusharsingla22222-source.github.io/Architecture-Portfolio-Solo-/
 
 ## Acknowledgments
 
