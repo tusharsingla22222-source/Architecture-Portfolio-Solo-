@@ -1,37 +1,227 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-:root{
-    --primary-text: 'Inter' , sans-serif;
-    --secondary-text: 'Space Grotesk' , sans-serif;
+:root {
+  --primary-text: "Inter", sans-serif;
+  --secondary-text: "Space Grotesk", sans-serif;
 }
-.back{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo8ZLyQiTZUDTBtwJu2bBzqNt2qnbct0ChvA&");
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    filter: grayscale(100%);
+
+/* HERO SECTION */
+.back {
+  background-image: url("https://franklloydwright.org/wp-content/uploads/2017/02/marin-county-civic-center.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.back h1 {
+  font-size: 140px;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--secondary-text);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: appear 1.5s ease forwards;
+  position: absolute;
+  top: 200px;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* MAIN CONTENT */
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 400px;
+  width: 90vw;
+  margin-block: 20px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  transition: all 2s;
+}
+
+.box:hover {
+  transform: scale(1.06);
+}
+
+.image {
+  height: 350px;
+  width: 35%;
+  margin: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  height: 350px;
+  width: 800px;
+  margin-top: 25px;
+  border: none;
+  border-block: 1px solid black;
+  padding-right: 15px;
+}
+
+.content h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--secondary-text);
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.content p {
+  color: black;
+  font-family: var(--secondary-text);
+}
+
+.content button {
+  padding: 10px;
+  margin-block: 20px;
+  text-transform: uppercase;
+  font-family: var(--secondary-text);
+  border: 1.5px solid black;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.content button:hover {
+  background: black;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .back {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    top: 300px;
+    align-items: center; /* center vertically + horizontally */
+  }
+
+  .back h1 {
+    position: static; /* remove absolute position */
+    top: unset;
+    font-size: 55px;
+    text-align: center;
+    transform: translateY(0);
+    padding: 0 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    height: auto;
+    width: 95vw;
+    margin-block: 30px;
+  }
+
+  .image {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid black;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
 }
-.back h1{
-    font-size: 100px;
-    position: absolute;
-    top: 170px;
-    color: white;
-    text-transform: uppercase;
-    font-family: var(--secondary-text);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: appear 1.5s ease forwards ;
-}
-@keyframes appear {
-    to{
-        opacity: 1;
-        transform: translateY(0px);
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  @media (max-width: 480px) {
+    .back {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    .back h1 {
+      position: static;
+      top: unset;
+      font-size: 40px;
+      text-align: center;
+      transform: translateY(0);
+    }
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+}
+
+.first {
+  background-image: url("https://cdn.britannica.com/15/191415-050-DFC74DF5/Robie-House-Chicago-Frank-Lloyd-Wright.jpg");
+  background-size: cover;
+}
+.second {
+  background-image: url("https://franklloydwright.org/wp-content/uploads/2025/01/TW2023HIGH_Andrew-Pielage-45-tours-header1.jpg");
+  background-size: cover;
+}
+.three {
+  background-image: url("https://images.adsttc.com/media/images/5037/de51/28ba/0d59/9b00/00bc/newsletter/stringio.jpg?1414230424");
+  background-size: cover;
+}
+.four {
+  background-image: url("https://socallandmarks.com/wp-content/uploads/2021/11/HollyhockHouse2.jpg");
+  background-size: cover;
+}
+.five {
+  background-image: url("https://assets.simpleviewinc.com/simpleview/image/upload/crm/laurel/2022-10-9-Fallingwater-006_355F2BC4-0DBA-A106-B4D721F2F4A86A82-355f0836b845446_35603ee9-aa38-bb40-50a65312f975f444.jpg");
+  background-size: cover;
+}
+.six {
+  background-image: url("https://franklloydwrightsites.com/wp-content/uploads/2022/06/32603481785_9f73bdebc9_c.jpg");
+  background-size: cover;
+}
+.seven {
+  background-image: url("https://www.pewcenterarts.org/sites/default/files/styles/lg_640x480_webp/public/beth-sholom-david-hartt-2018-07-web.jpg.webp?itok=cZAmr24p");
+  background-size: cover;
+}
+.eight {
+  background-image: url("https://www.architecture.org/cdn-cgi/image/f=auto,w=780,q=80/https://images.architecture.org/api/v1/image/assets%2F49af4dfb0fbc43d58bf8ce407e839d74%2F908c69ccbc494a45b1666d720fcf895c");
+  background-size: cover;
 }

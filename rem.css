@@ -8,7 +8,7 @@
     --secondary-text: 'Space Grotesk' , sans-serif;
 }
 .back{
-    background-image: url("https://www.sleek-mag.com/wp-content/uploads/2017/02/Mental-Health-900x600.jpg");
+    background-image: url("https://media.architecturaldigest.com/photos/56fd7e0eb10a11a0664dd826/16:9/w_2560%2Cc_limit/rem-koolhaas-architecture-buildings-007.jpg");
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -106,43 +106,39 @@
     background: black;
     color: white;
 }
-
 .first{
-    background-image: url("https://www.amazingczechia.com/wp-content/uploads/2020/09/dancing-house-prague.jpg");
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2c/Seattle_Library_01.jpg');
     background-size: cover;
 }
 .second{
-    background-image: url("https://www.permasteelisagroup.com/wp-content/uploads/2025/03/permasteelisa-projects-eight-spruce-street-facade_2-ME.jpg");
+    background-image: url('https://images.adsttc.com/media/images/552c/8d12/e58e/ce2c/fd00/0199/large_jpg/92735_%C2%A9_Philippe_Ruault.jpg?1428983051');
     background-size: cover;
 }
-.third{
-    background-image: url("https://sheehyconstruction.com/wp-content/uploads/2017/02/Weisman-1024x683.jpg");
-    background-size: cover
+.three{
+    background-image: url('https://images.adsttc.com/media/images/554a/f3af/e58e/ce42/3b00/012d/newsletter/PORTADA_01-Fondazione_Prada_Photo_Bas_Princen.jpg?1430975399');
+    background-size: cover;
 }
 .four{
-    background-image: url("https://www.hydrotechusa.com/sites/default/files/styles/large/public/projects/StataCenter2.jpg?itok=kB_H1Cmy");
+    background-image: url('https://images.adsttc.com/media/images/528f/b00f/e8e4/4efc/1f00/025b/newsletter/Copy_North_view_bridge_OssipvanDuivenbode_copyright_OMA.jpg?1385148411');
     background-size: cover;
 }
 .five{
-    background-image: url("https://www.parisselectbook.com/wp-content/uploads/2024/06/retouche-photo-word-press-26.jpg");
+    background-image: url('https://www.designboom.com/wp-content/uploads/2020/03/OMA-qatar-national-library-atelier-vincent-hecht-designboom-01.jpg');
     background-size: cover;
 }
 .six{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg/1200px-Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg");
+    background-image: url("https://www.metalocus.es/sites/default/files/styles/mopis_news_carousel_item_desktop/public/METALOCUS_IIT-McCormick_01_1280.jpg?itok=2_c4J8N1");
     background-size: cover;
 }
 .seven{
-    background-image: url("https://cms.guggenheim-bilbao.eus/uploads/2021/03/2-1.jpg");
-     background-size: cover;
-}
-.eight{
-    background-image: url("https://media.hostunusual.com/wp-content/uploads/2022/04/31170405/marques-de-riscal-night.jpg");
+    background-image: url('https://images.adsttc.com/media/images/627e/47bf/7df9/9b01/667c/6a86/large_jpg/9-taipei-performing-arts-center-c-oma-photography-by-chris-stowers.jpg?1652443112');
     background-size: cover;
 }
-/* -------------------------------------------------- */
-/*      FULL MOBILE RESPONSIVENESS FOR GEHRY PAGE     */
-/* -------------------------------------------------- */
-
+.eight{
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5164b16ae4b0cac6e79b081f/1555281924359-BQOVVL8HAW5JA25UYI0M/2019_04_01-121+E+22-DSC09660.jpg');
+    background-size: cover;
+    background-position: center;
+}
 @media (max-width: 900px) {
 
   /* HERO TITLE */
@@ -253,7 +249,7 @@
   }
 }
 
-
+/* Optional: reduce transition intensity on mobile so animations feel smoother */
 @media (max-width: 900px) {
   .box {
     transition: transform 0.25s ease;

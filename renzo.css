@@ -1,0 +1,265 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --primary-font:'Inter' , sans-serif;
+    --secondary-font:"Space Grotesk" , sans-serif;
+}
+.back {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/C6Hv3DcBPEHG5DaFg5AU4Y.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: var(--secondary-font);
+  letter-spacing: 5px;
+}
+
+.back h1 {
+  font-size: 140px;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--secondary-text);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: appear 1.5s ease forwards;
+  position: absolute;
+  top: 200px;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* MAIN CONTENT */
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 400px;
+  width: 90vw;
+  margin-block: 20px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  transition: all 3s;
+}
+
+.box:hover {
+  transform: scale(1.06);
+}
+
+.image {
+  height: 350px;
+  width: 35%;
+  margin: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  height: 350px;
+  width: 800px;
+  margin-top: 25px;
+  border: none;
+  border-block: 1px solid black;
+  padding-right: 15px;
+}
+
+.content h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--secondary-font);
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.content p {
+  color: black;
+  font-family: var(--secondary-font);
+}
+
+.content button {
+  padding: 10px;
+  margin-block: 20px;
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+  border: 1.5px solid black;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.content button:hover {
+  background: black;
+  color: white;
+}
+
+
+@media (max-width: 900px) {
+
+  .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .back h1 {
+        position: static;
+        margin: 0 auto;
+        transform: none;
+        width: 100%;
+        padding: 0 12px;
+        font-size: 80px;
+        letter-spacing: 3px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+  /* BOXES RESPONSIVE */
+  .box {
+    flex-direction: column;
+    height: auto;
+    width: 95vw;
+    margin-block: 30px;
+    border: 1px solid black;
+  }
+
+  /* IMAGE FIX */
+  .image {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* CONTENT FIX */
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid black;
+    text-align: left;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+/* SMALL PHONE FIX (like Gehry) */
+@media (max-width: 480px) {
+
+  .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .back h1 {
+        position: static;
+        margin: 0 auto;
+        transform: none;
+        width: 100%;
+        padding: 0 12px;
+        font-size: 40px;
+        letter-spacing: 3px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+  .image {
+    height: 200px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+}
+.first{
+    background-image: url("https://media.newyorker.com/photos/61e86e4ff4a035bc37bd3d48/master/pass/DeMonchaux-PompidouCenter.jpg");
+    background-size: cover;
+}
+.second{
+    background-image: url("https://www.the-shard.com/media/ep3hy4eh/jasonhawkes-6282.jpg");
+    background-size: cover;
+}
+.three{
+    background-image: url("https://images.adsttc.com/media/images/5721/d79c/e58e/ceca/e200/0002/large_jpg/626.008.jpg?1461835654");
+    background-size: cover;
+}
+.four{
+    background-image: url('https://silverkris.singaporeair.com/wp-content/uploads/2025/08/Stavros-Niarchos-Cultural-Center-Athens-City-Guide-SilverKris.jpg');
+    background-size: cover;
+}
+.five{
+    background-image: url("https://www.erco.com/images/new-york-times-building-3639/eur-og-3639.jpg");
+    background-size: cover;
+}
+.six{
+    background-image: url("https://www.calacademy.org/sites/default/files/styles/manual_crop_standard_960x540/public/uploads/images/cas22-155-layers-small.jpg?itok=YMp92jP5&c=f14936ae55e8d4293886b19bcfa364bd");
+    background-size: cover;
+}
+.seven{
+    background-image: url("https://cdn.sanity.io/images/zi3g9jaq/production/8c9e26ceb158f92d12336ab9cc5015f95386c6ff-1400x2135.jpg");
+    background-size: cover;
+}
+.eight{
+    background-image: url("https://arquitecturaviva.com/assets/uploads/obras/46041/av_imagen.webp");
+    background-size: cover;
+}
+.nine{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f3/Centro_Bot%C3%ADn%2C_Santander_1.jpg");
+    background-size: cover;
+}
+.ten{
+    background-image: url("https://www.greenroofs.com/wp-content/uploads/2018/09/potsdamer_platz-Aerial-Immobilie-e.jpg");
+    background-size: cover;
+}
+.eleven{
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/a4/dd/83/photo0jpg.jpg?w=900&h=500&s=1');
+    background-size: cover;
+}
+.twelve{
+    background-image: url('https://cdn.ca.emap.com/wp-content/uploads/sites/12/2018/06/a075e8289_index_328506113.jpg');
+    background-size: cover;
+}
+.thirteen{
+    background-image: url('https://images.squarespace-cdn.com/content/v1/64073c3afdb5c4737243d022/1690801600821-NLAQEDOH4IHQYH1GVZ08/designinternational-vulcano_buono_italy-birdeye.jpg');
+    background-size: cover;
+}

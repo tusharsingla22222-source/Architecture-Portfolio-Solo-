@@ -1,0 +1,311 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --primary-text:'Inter' , sans-serif;
+    --secondary-text: 'Space Grotesk' , sans-serif;
+}
+.back{
+    background-image: url("https://guidemebarcelona.com/wp-content/uploads/2024/06/1-1.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    filter: grayscale(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back h1{
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--secondary-text);
+    font-size: 140px ;
+    margin: 0;
+    position: absolute;
+    word-spacing: 2px;
+    letter-spacing: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: appear 1.5s ease forwards;
+    top: 250px;
+}
+@keyframes appear {
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.boxes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 400px;
+    width: 90vw;
+    margin-block: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 3s;
+}
+
+.box:hover{
+    transform: scale(1.06);
+}
+
+.image{
+    height: 350px;
+    width: 35%;
+    margin: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    height: 350px;
+    width: 800px;
+    margin-top: 25px;
+    border: none;
+    border-block: 1px solid black;
+    padding-right: 15px;
+}
+
+.content h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--secondary-text);
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.content p{
+    color: black;
+    font-family: 'Space Grotesk' , sans-serif;
+}
+
+.content button{
+    padding: 10px;
+    margin-block: 20px;
+    text-transform: uppercase;
+    font-family: var(--secondary-text);
+    border: 1.5px solid black;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.content button:hover{
+    background: black;
+    color: white;
+}
+.first{
+    background-image: url("https://ticketsagradafamilia.com/wp-content/uploads/2025/07/Sagrada.jpg");
+    background-size: cover;
+}
+.second{
+    background-image: url("https://www.casabatllo.es/wp-content/uploads/2025/06/Web_Historia-4.jpg?x28993");
+    background-size: cover;
+}
+.three{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Casa_Mil%C3%A0%2C_general_view.jpg");
+    background-size: cover;
+}
+.four{
+    background-image: url("https://cdn-imgix.headout.com/media/images/cc45d5b3fc11c7fe53de0a62b0ff5153-21410-barcelona-barcelona-day-tour-with-sagrada-familia-and-gaudi--houses-03.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop");
+    background-size: cover;
+}
+.five{
+    background-image: url("https://cdn.prod.website-files.com/67e6d801b76e1139cbbf6fa7/67f004a3d215211b0ef70ba4_67efa79dbc57949d348ea0fa_capricho-gaudi-comillas_default.jpg.webp");
+    background-size: cover;
+}
+.six{
+    background-image: url("https://rutadelmodernisme.com/wp-content/uploads/2017/10/torre-bellesguard-ruta-del-modernisme-de-barcelona-2.jpg");
+    background-size: cover;
+}
+.seven{
+    background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/05/3a/54/puente-de-piedra.jpg?w=1200&h=-1&s=1");
+    background-size: cover;
+}
+.eight{
+    background-image: url('https://i.ytimg.com/vi/-GNbdoDdRh0/maxresdefault.jpg');
+    background-size: cover;
+}
+.nine{
+    background-image: url("https://www.turismocastillayleon.com/en/heritage-culture/palaces/episcopal-palace-palace-gaudi.files/267748-hq_Palacio%20de%20Gaudi02_Astorga_Leon.jpg/h,267748-hq_Palacio%20de%20Gaudi02_Astorga_Leon.jpg");
+    background-size: cover;
+}
+.ten{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/69/Celler_G%C3%BCell01.jpg");
+    background-size: cover;
+}
+.eleven{
+    background-image: url("https://d2exd72xrrp1s7.cloudfront.net/www/000/1k7/bf/bfnfd6fuin4m17pz9kd36lub54o1byilb-uhi63360458/0?width=768&height=576&crop=true");
+    background-size: cover;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+  /* HERO TITLE FIX */
+   .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .back h1 {
+        position: static;       /* remove fixed top offset */
+        transform: none;        /* reset animation shift */
+        margin: 0 auto;
+        text-align: center;
+        font-size: 90px;
+        letter-spacing: 4px;
+        line-height: 1.2;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+  /* BOXES RESPONSIVE: stack each card vertically */
+  .box {
+    flex-direction: column;
+    height: auto;
+    width: 95vw;
+    margin-block: 30px;
+    border: 1px solid black;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  /* IMAGE FIX: full-width hero image for each card */
+  .image {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* CONTENT FIX: becomes natural height and full width beneath image */
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid black;
+    text-align: left;
+  }
+
+  .content h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+/* SMALL PHONE FIX */
+@media (max-width: 480px) {
+
+   .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .back h1 {
+        position: static;       /* remove fixed top offset */
+        transform: none;        /* reset animation shift */
+        margin: 0 auto;
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 4px;
+        line-height: 1.2;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+  .image {
+    height: 200px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+}
+
+/* Optional extra tweak: ensure very large desktop screens don't blow up the hero */
+@media (min-width: 1600px) {
+  .back h1 {
+    font-size: 140px;
+    top: 280px;
+  }
+}
+
+.first{
+    background-image: url("https://ticketsagradafamilia.com/wp-content/uploads/2025/07/Sagrada.jpg");
+    background-size: cover;
+}
+.second{
+    background-image: url("https://www.casabatllo.es/wp-content/uploads/2025/06/Web_Historia-4.jpg?x28993");
+    background-size: cover;
+}
+.three{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Casa_Mil%C3%A0%2C_general_view.jpg");
+    background-size: cover;
+}
+.four{
+    background-image: url("https://cdn-imgix.headout.com/media/images/cc45d5b3fc11c7fe53de0a62b0ff5153-21410-barcelona-barcelona-day-tour-with-sagrada-familia-and-gaudi--houses-03.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop");
+    background-size: cover;
+}
+.five{
+    background-image: url("https://cdn.prod.website-files.com/67e6d801b76e1139cbbf6fa7/67f004a3d215211b0ef70ba4_67efa79dbc57949d348ea0fa_capricho-gaudi-comillas_default.jpg.webp");
+    background-size: cover;
+}
+.six{
+    background-image: url("https://rutadelmodernisme.com/wp-content/uploads/2017/10/torre-bellesguard-ruta-del-modernisme-de-barcelona-2.jpg");
+    background-size: cover;
+}
+.seven{
+    background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/05/3a/54/puente-de-piedra.jpg?w=1200&h=-1&s=1");
+    background-size: cover;
+}
+.eight{
+    background-image: url('https://i.ytimg.com/vi/-GNbdoDdRh0/maxresdefault.jpg');
+    background-size: cover;
+}
+.nine{
+    background-image: url("https://www.turismocastillayleon.com/en/heritage-culture/palaces/episcopal-palace-palace-gaudi.files/267748-hq_Palacio%20de%20Gaudi02_Astorga_Leon.jpg/h,267748-hq_Palacio%20de%20Gaudi02_Astorga_Leon.jpg");
+    background-size: cover;
+}
+.ten{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/69/Celler_G%C3%BCell01.jpg");
+    background-size: cover;
+}
+.eleven{
+    background-image: url("https://d2exd72xrrp1s7.cloudfront.net/www/000/1k7/bf/bfnfd6fuin4m17pz9kd36lub54o1byilb-uhi63360458/0?width=768&height=576&crop=true");
+    background-size: cover;
+}

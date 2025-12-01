@@ -56,7 +56,7 @@
     border: 1px solid black;
     display: flex;
     justify-content: space-evenly;
-    transition: all 2s;
+    transition: all 3s;
 }
 .box:hover{
     transform: scale(1.06);

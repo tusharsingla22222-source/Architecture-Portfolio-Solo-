@@ -8,7 +8,7 @@
     --secondary-text: 'Space Grotesk' , sans-serif;
 }
 .back{
-    background-image: url("https://www.sleek-mag.com/wp-content/uploads/2017/02/Mental-Health-900x600.jpg");
+    background-image: url("https://i.insider.com/5cde502be9f08a5e46698889?width=911&format=jpeg");
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -106,43 +106,53 @@
     background: black;
     color: white;
 }
-
 .first{
-    background-image: url("https://www.amazingczechia.com/wp-content/uploads/2020/09/dancing-house-prague.jpg");
+    background-image: url("https://cdn.britannica.com/74/250074-050-DD110B36/IM-Pei-designed-pyramid-Louvre-Paris-France.jpg");
     background-size: cover;
 }
 .second{
-    background-image: url("https://www.permasteelisagroup.com/wp-content/uploads/2025/03/permasteelisa-projects-eight-spruce-street-facade_2-ME.jpg");
+    background-image: url('https://atlive-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/AT_Still-standing_BankOfChina_02_cPaulWarchol.png');
     background-size: cover;
 }
-.third{
-    background-image: url("https://sheehyconstruction.com/wp-content/uploads/2017/02/Weisman-1024x683.jpg");
-    background-size: cover
+.three{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8d/IslamicArtMuseumDohaSkyline.jpg');
+    background-size: cover;
 }
 .four{
-    background-image: url("https://www.hydrotechusa.com/sites/default/files/styles/large/public/projects/StataCenter2.jpg?itok=kB_H1Cmy");
+    background-image: url('https://res.cloudinary.com/dtljonz0f/image/upload/f_auto/q_auto/v1/gc-v1/boston/JFK-Museum-usewater-shot%20(1)?_a=BAVAZGE70');
     background-size: cover;
 }
 .five{
-    background-image: url("https://www.parisselectbook.com/wp-content/uploads/2024/06/retouche-photo-word-press-26.jpg");
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Rock_and_Roll_Hall_of_Fame_-_Joy_of_Museums_1.jpg');
     background-size: cover;
 }
 .six{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg/1200px-Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg");
+    background-image: url('https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/activities/cwwusaqa5hwksadlk5eg/MihoMuseumKyu-Chikurin-inTempleLakeBiwaShirahigeShrineDayTrip-KlookIndia.jpg');
     background-size: cover;
 }
 .seven{
-    background-image: url("https://cms.guggenheim-bilbao.eus/uploads/2021/03/2-1.jpg");
-     background-size: cover;
-}
-.eight{
-    background-image: url("https://media.hostunusual.com/wp-content/uploads/2022/04/31170405/marques-de-riscal-night.jpg");
+    background-image: url('https://theidlewoman.net/wp-content/uploads/2016/10/suzhou-museum-michael-freeman.jpg');
     background-size: cover;
 }
-/* -------------------------------------------------- */
-/*      FULL MOBILE RESPONSIVENESS FOR GEHRY PAGE     */
-/* -------------------------------------------------- */
+.eight{
+    background-image: url("https://www.chinaholiday.com/Photos/20680/6569205.jpg");
+    background-size: cover;
+}
+.nine{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/86/%E8%B7%AF%E6%80%9D%E7%BE%A9%E7%9A%84%E7%90%86%E5%BF%B5.jpg');
+    background-size: cover;
+}
+.ten{
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/14/de/3f/deutsches-historisches.jpg?w=1200&h=-1&s=1');
+    background-size: cover;
+}
+.eleven{
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/a7/4c/f9/caption.jpg?w=1200&h=1200&s=1');
+    background-size: cover;
+}
+/* -------- Responsive patch (paste at end of pei.css) -------- */
 
+/* Tablet / small laptop and below */
 @media (max-width: 900px) {
 
   /* HERO TITLE */
@@ -253,7 +263,7 @@
   }
 }
 
-
+/* Optional: reduce transition intensity on mobile so animations feel smoother */
 @media (max-width: 900px) {
   .box {
     transition: transform 0.25s ease;

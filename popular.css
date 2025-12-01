@@ -119,6 +119,7 @@ nav .nav-links {
 #scrollpara {
   color: white;
   position: absolute;
+  font-family: 'Space Grotesk' ,sans-serif;
   text-transform: uppercase;
   font-size: 12px;
   bottom: 20px;
@@ -181,6 +182,30 @@ nav .nav-links {
   background-image: url("https://cdn.sanity.io/images/476nwnl9/production/3780e854f815bc4ac9385496ddb3cc0e8b9bf02b-2414x3000.jpg?auto=format&fit=crop&h=512&rect=735%2C228%2C1257%2C1257&w=512");
   background-size: cover;
 }
+.five{
+  background-image: url("https://www.meisterdrucke.uk/kunstwerke/1260px/Pau%20Audouard%20-%20Portrait%20of%20Antoni%20Gaudi%20c1878%20-%20%28MeisterDrucke-630828%29.jpg");
+  background-size: cover;
+}
+.six{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Renzo_Piano%2C_portrait.jpg/960px-Renzo_Piano%2C_portrait.jpg");
+  background-size: cover;
+}
+.seven{
+  background-image: url("https://www.globaltimes.cn/Portals/0/attachment/2019/2019-05-17/10443366-8f0e-45bc-b051-a2dcd100790a.jpeg");
+  background-size: cover;
+}
+.eight{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/83/Tadao_Ando_2004_%284x5_cropped%29.jpg');
+  background-size: cover;
+}
+.nine{
+  background-image: url('https://aplust.net/imagenes_blog/A1sdtLs0_RemKoolhaas.jpg');
+  background-size: cover;
+}
+.ten{
+  background-image: url('https://www.alainelkanninterviews.com/wp-content/uploads/2023/11/CALATRAVA_09_299-687x640.jpg');
+  background-size: cover;
+}
 .about {
   flex: 1;
   padding: 20px;
@@ -217,9 +242,7 @@ nav .nav-links {
   transform: translateY(-2px);
 }
 
-/* --------------------------------------------- */
-/*          FULL MOBILE RESPONSIVENESS           */
-/* --------------------------------------------- */
+
 
 @media (max-width: 768px) {
 

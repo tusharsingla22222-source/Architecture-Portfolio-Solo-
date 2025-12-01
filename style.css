@@ -24,7 +24,7 @@ body {
 nav {
   font-family: "Space Grotesk", "sans-serif";
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 25px;
   position: sticky;
   top: 0px;
@@ -309,7 +309,6 @@ nav ul li:hover {
   background-size: cover;
   filter: grayscale(100%);
 }
-
 .fifteen {
   height: 300px;
   width: 100%;
@@ -317,6 +316,120 @@ nav ul li:hover {
   background-size: cover;
   filter: grayscale(100%);
 }
+
+
+
+
+.card1{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1200px-Colosseo_2020.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card2{
+  height: 300px;
+  width: 100%;
+  background-image: url('https://static.wixstatic.com/media/055605_65e20a7fcbc54e2e8720adfc2544c35e~mv2.jpg/v1/fill/w_1800,h_1082,al_c,q_85/taj_new_contant_edited.jpg');
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card3{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card4{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://architectureofcities.com/wp-content/uploads/2021/02/2244612961_f6192bcf9e_h-1024x768.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card5{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://res.cloudinary.com/ddjuftfy2/image/upload/f_webp,c_fill,q_auto/memphis/large/724259958_15104168252_3f12754438_c%20(1).jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card6{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/da/The_Parthenon_in_Athens.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card7{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://ramoo.in/wp-content/uploads/2023/05/Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg ");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card8{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://cdn.britannica.com/01/153601-050-CC20C4EB/Stonehenge-Salisbury-Plain-England-Wiltshire.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card9{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://minio.yuix.org/tto-rest/blog-content/van-fortress-1.webp");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card10{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/Konarka_Temple.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card11{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://s7ap1.scene7.com/is/image/incredibleindia/ellora-caves-chhatrapati-sambhaji-nagar-maharashtra-attr-hero-5?qlt=82&ts=1727010646173");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card12{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card13{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/51/Chichen_Itza_3.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card14{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://cdn-imgix.headout.com/media/images/fd89223056e350ae524f6c6120198677-Bluemosqueistanbul.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.card15{
+  height: 300px;
+  width: 100%;
+  background-image: url("https://www.theancientconnection.com/wp-content/uploads/2021/07/megalitic.png");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+
+
+
+
 
 @keyframes scroll {
   from {
@@ -516,4 +629,18 @@ nav.scrolled .hamburger span {
     margin-top: 40px !important;
     display: block !important;
   }
+}
+
+
+
+
+/* Footer */
+
+footer{
+  position: relative;
+  top: 500px;
+  bottom: 0;
+  height: 500px;
+  width: 100vw;
+  background-color: black;
 }

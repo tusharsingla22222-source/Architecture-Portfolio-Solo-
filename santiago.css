@@ -8,7 +8,7 @@
     --secondary-text: 'Space Grotesk' , sans-serif;
 }
 .back{
-    background-image: url("https://www.sleek-mag.com/wp-content/uploads/2017/02/Mental-Health-900x600.jpg");
+    background-image: url("https://designlifestyle.it/wp-content/uploads/2021/09/santiago-calatrava-designlifestyle-0.jpg");
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -22,7 +22,7 @@
     color: white;
     text-transform: uppercase;
     font-family: var(--secondary-text);
-    font-size: 140px ;
+    font-size: 120px ;
     margin: 0;
     position: absolute;
     word-spacing: 2px;
@@ -106,43 +106,70 @@
     background: black;
     color: white;
 }
-
 .first{
-    background-image: url("https://www.amazingczechia.com/wp-content/uploads/2020/09/dancing-house-prague.jpg");
+    background-image: url('https://www.fmsp.com/wp-content/uploads/2018/01/WTC-Transportation-Hub_2.jpg');
     background-size: cover;
 }
 .second{
-    background-image: url("https://www.permasteelisagroup.com/wp-content/uploads/2025/03/permasteelisa-projects-eight-spruce-street-facade_2-ME.jpg");
+    background-image: url('https://www.usgbc.org/sites/default/files/museu-2.jpg');
     background-size: cover;
 }
-.third{
-    background-image: url("https://sheehyconstruction.com/wp-content/uploads/2017/02/Weisman-1024x683.jpg");
-    background-size: cover
+.three{
+    background-image: url('https://www.spain.info/export/sites/segtur/.content/images/cabeceras-grandes/comunidad-valenciana/ciudad-artes-ciencias-noche-valencia-pexel256150.jpg');
+    background-size: cover;
 }
 .four{
-    background-image: url("https://www.hydrotechusa.com/sites/default/files/styles/large/public/projects/StataCenter2.jpg?itok=kB_H1Cmy");
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/6f/89/6f/img-20170531-095456-largejpg.jpg?w=900&h=500&s=1');
     background-size: cover;
 }
 .five{
-    background-image: url("https://www.parisselectbook.com/wp-content/uploads/2024/06/retouche-photo-word-press-26.jpg");
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d2/52/64/milwaukee-art-museum.jpg?w=1200&h=-1&s=1');
     background-size: cover;
 }
 .six{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg/1200px-Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg");
+    background-image: url('https://calatrava.com/files/projects/athens-olympic-sports-complex-259/athens-olympic-sports-complex-03.jpg');
     background-size: cover;
 }
 .seven{
-    background-image: url("https://cms.guggenheim-bilbao.eus/uploads/2021/03/2-1.jpg");
-     background-size: cover;
-}
-.eight{
-    background-image: url("https://media.hostunusual.com/wp-content/uploads/2022/04/31170405/marques-de-riscal-night.jpg");
+    background-image: url('https://www.ciudadfcc.com/documents/14171717/15147358/Vista%20panor%C3%A1mica%20nocturna%20del%20Puente%20del%20Alamillo.png/bfbbe16d-e851-40c0-8613-6acc69988db7?1.0');
     background-size: cover;
 }
-/* -------------------------------------------------- */
-/*      FULL MOBILE RESPONSIVENESS FOR GEHRY PAGE     */
-/* -------------------------------------------------- */
-
+.eight{
+    background-image: url('https://www.planetizen.com/files/images/shutterstock_548811925.jpg');
+    background-size: cover;
+}
+.nine{
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/b2/a6/9e/peace-bridge.jpg?w=1200&h=-1&s=1');
+    background-size: cover;
+}
+.ten{
+    background-image: url('https://nordomatic.com/global/wp-content/uploads/sites/6/2024/01/shutterstock_1456864439-scaled.jpg');
+    background-size: cover;
+}
+.eleven{
+    background-image: url('https://www.euskoguide.com/images/bg-large/ysios.jpg');
+    background-size: cover;
+}
+.twelve{
+    background-image: url('https://mgmcgrath.com/wp-content/uploads/2015/05/floridapolytech6.jpg');
+    background-size: cover;
+}
+.thirteen{
+    background-image: url('https://estatics-nasia.dtibcn.cat/nasia-pro/media/201505torre-calatrava.optimized.2916e76e.jpg');
+    background-size: cover;
+}
+.fourteen{
+    background-image: url('https://www.visitvalencia.com/sites/default/files/media/media-images/images/p/palau-arts2.jpg');
+    background-size: cover;
+}
+.fifteen{
+    background-image: url('https://www.auditoriodetenerife.com/wp-content/uploads/2024/08/adt.JPG');
+    background-size: cover;
+}
+.sixteen{
+    background-image: url('https://archello.s3.eu-central-1.amazonaws.com/images/2021/10/11/santiago-calatrava-qatar-pavilion-at-expo-2020-dubai-pavilions-archello.1633957713.9177.jpg');
+    background-size: cover;
+}
 @media (max-width: 900px) {
 
   /* HERO TITLE */
@@ -253,7 +280,7 @@
   }
 }
 
-
+/* Optional: reduce transition intensity on mobile so animations feel smoother */
 @media (max-width: 900px) {
   .box {
     transition: transform 0.25s ease;
