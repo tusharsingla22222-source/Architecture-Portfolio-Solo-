@@ -182,7 +182,10 @@ nav ul li:hover {
 }
 
 .card {
-  overflow: auto;
+  position: relative;
+  /* Ensure absolute child is relative to this */
+  overflow: hidden;
+  /* Hide overflow */
   height: 300px;
   width: 500px;
   border: 1px solid transparent;
@@ -463,6 +466,30 @@ nav ul li:hover {
   z-index: 999;
 }
 
+.card p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  padding: 15px 10px;
+  box-sizing: border-box;
+}
+
+.card:hover p {
+  opacity: 1;
+}
+
 nav .nav-links {
   z-index: 9999;
 }
@@ -482,8 +509,6 @@ nav .nav-links {
     height: 0;
     overflow: hidden;
     flex-direction: column;
-
-    /* ⬇️ Center nav links */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -764,10 +789,178 @@ nav.scrolled .hamburger span {
 }
 
 
+/* Sketchbook Section */
+.sketchbook {
+  padding: 150px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  overflow: hidden;
+  /* Prevent horizontal scroll from rotated elements */
+}
+
+.sketchbook h2 {
+  font-size: 36px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.sketch-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+  /* Fixed height for the overlapping area */
+}
+
+.sketch-item {
+  position: absolute;
+  width: 500px;
+  /* Much larger width */
+  /* Smooth transition for transform and box-shadow. Delay z-index on return so it stays on top while shrinking */
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease, z-index 0s linear 0.6s;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 15px 15px 50px 15px;
+  /* Polaroid style padding */
+  border-radius: 2px;
+  /* Slight rounding for smoothness */
+
+  /* Default variables */
+  --tx: 0px;
+  --ty: 0px;
+  --rot: 0deg;
+  transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(1);
+}
+
+/* Positioning individual items to overlap */
+.sketch-item:nth-child(1) {
+  --tx: -250px;
+  --rot: -10deg;
+  z-index: 1;
+}
+
+.sketch-item:nth-child(2) {
+  --ty: -20px;
+  --rot: 5deg;
+  z-index: 2;
+}
+
+.sketch-item:nth-child(3) {
+  --tx: 250px;
+  --rot: -5deg;
+  z-index: 1;
+}
+
+/* Hover effects */
+.sketch-item:hover {
+  /* Scale up but keep original position and rotation to prevent flickering */
+  transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(1.1);
+  z-index: 10 !important;
+  /* Bring to front */
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+  /* No delay on z-index when hovering */
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease, z-index 0s;
+}
+
+.sketch-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.sketch-caption {
+  font-family: "Reenie Beanie", cursive, sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Selected Works Section */
+.selected-works {
+  padding: 100px 20px;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.selected-works h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.work-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.work-item:hover .work-image {
+  transform: scale(1.05);
+}
+
+.work-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.work-item:hover .work-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.work-info p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #ccc;
+}
+
 /* Footer */
 
 footer {
-  background-color: #000;
+  background-color: #1a1a1a;
   color: #fff;
   padding: 60px 20px 20px;
   font-family: "Space Grotesk", sans-serif;
@@ -867,5 +1060,205 @@ footer {
 
   .socials {
     justify-content: center;
+  }
+}
+
+/* SCROLL TO TOP BUTTON */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 9999;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.scroll-top-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #667eea);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scroll-top-btn:hover::before {
+  opacity: 1;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.scroll-top-btn:hover {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+  animation: none;
+}
+
+.scroll-top-btn:active {
+  transform: scale(1.05);
+}
+
+/* Pulse effect */
+.scroll-top-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(102, 126, 234, 0.6);
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-top-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
+
+/* DID YOU KNOW SECTION */
+.facts-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.facts-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+}
+
+.facts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.fact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.fact-number {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(102, 126, 234, 0.15);
+  margin-bottom: 15px;
+}
+
+.fact-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  color: #667eea;
+  margin-bottom: 12px;
+}
+
+.fact-card p {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive for Facts Section */
+@media (max-width: 768px) {
+  .facts-title {
+    font-size: 32px;
+  }
+
+  .facts-container {
+    grid-template-columns: 1fr;
   }
 }

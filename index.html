@@ -31,8 +31,8 @@
           <a href="popular.html">
             <li>ABOUT</li>
           </a>
-          <a href="">
-            <li>PROJECTS</li>
+          <a href="blogs.html">
+            <li>BLOGS</li>
           </a>
           <a href="">
             <li>ABOUT</li>
@@ -49,7 +49,7 @@
     <div class="content">
       <p>SPATIAL DESIGN & THEORY</p>
       <h1>DESIGNING THE VOID.</h1>
-      <button>View Projects</button>
+      <a href="projects.html"><button>View Projects</button></a>
     </div>
     </div>
   </header>
@@ -246,19 +246,56 @@
         </div>
       </div>
     </div>
-    <section class="philosophy">
-      <div class="philosophy-content">
-        <h2>Our Philosophy</h2>
-        <blockquote>
-          "Architecture should speak of its time and place, but yearn for timelessness."
-        </blockquote>
-        <p>
-          We believe that every space tells a story. Our mission is to craft environments that not only function
-          beautifully but also inspire and elevate the human experience. Through a blend of modern innovation and
-          timeless design principles, we create voids that are full of life.
-        </p>
+    <section class="sketchbook">
+      <h2>From the Sketchbook</h2>
+      <div class="sketch-gallery">
+        <div class="sketch-item">
+          <img src="images/sketch1.png" alt="Urban Void Concept Sketch" class="sketch-image">
+          <p class="sketch-caption">Initial Concept: Urban Void</p>
+        </div>
+        <div class="sketch-item">
+          <img src="images/sketch2.png" alt="Light & Shadow Study" class="sketch-image">
+          <p class="sketch-caption">Structure Study: Light & Shadow</p>
+        </div>
+        <div class="sketch-item">
+          <img src="images/sketch3.png" alt="Organic Flow Detail" class="sketch-image">
+          <p class="sketch-caption">Facade Detail: Organic Flow</p>
+        </div>
       </div>
     </section>
+    <!-- <section class="selected-works">
+      <h2>Selected Works</h2>
+      <div class="works-grid">
+        <div class="work-item">
+          <img src="images/project1.png" alt="The Void House" class="work-image">
+          <div class="work-info">
+            <h3>The Void House</h3>
+            <p>Residential</p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="images/project2.png" alt="Azure Tower" class="work-image">
+          <div class="work-info">
+            <h3>Azure Tower</h3>
+            <p>Commercial</p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="images/project3.png" alt="Echo Museum" class="work-image">
+          <div class="work-info">
+            <h3>Echo Museum</h3>
+            <p>Cultural</p>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="images/project4.png" alt="Vertex Pavilion" class="work-image">
+          <div class="work-info">
+            <h3>Vertex Pavilion</h3>
+            <p>Public Space</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
     <section class="testimonials">
       <h2>Client Testimonials</h2>
       <div class="testimonial-grid">
@@ -276,6 +313,49 @@
           <p class="quote">"Living in a home designed by Arch.Folio is an experience in itself. It's not just a
             building, it's art."</p>
           <p class="author">- Elena Rodriguez, Homeowner</p>
+        </div>
+      </div>
+    </section>
+    <section class="philosophy">
+      <div class="philosophy-content">
+        <h2>Our Philosophy</h2>
+        <blockquote>
+          "Architecture should speak of its time and place, but yearn for timelessness."
+        </blockquote>
+        <p>
+          We believe that every space tells a story. Our mission is to craft environments that not only function
+          beautifully but also inspire and elevate the human experience. Through a blend of modern innovation and
+          timeless design principles, we create voids that are full of life.
+        </p>
+      </div>
+    </section>
+
+    <!-- DID YOU KNOW SECTION -->
+    <section class="facts-section">
+      <h2 class="facts-title">Did You Know?</h2>
+      <div class="facts-container">
+        <div class="fact-card">
+          <div class="fact-number">01</div>
+          <h3>The Leaning Tower of Pisa</h3>
+          <p>Started leaning during construction in the 12th century due to soft ground. It took 199 years to complete!
+          </p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">02</div>
+          <h3>Burj Khalifa's Height</h3>
+          <p>At 828 meters, you can see the sunset from the base, then take the elevator to the top and see it again!
+          </p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">03</div>
+          <h3>Sagrada Família</h3>
+          <p>Construction began in 1882 and is expected to be completed in 2026 - that's 144 years of building!</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">04</div>
+          <h3>The Pantheon's Dome</h3>
+          <p>Built in 126 AD, it remains the world's largest unreinforced concrete dome, still standing strong after
+            2000 years.</p>
         </div>
       </div>
     </section>
@@ -310,6 +390,12 @@
       <p>&copy; 2024 Arch.Folio. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    ↑
+  </button>
+
   <script src="script.js"></script>
 </body>
 
